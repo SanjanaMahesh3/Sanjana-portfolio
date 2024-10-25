@@ -2,54 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sanjana Mahesh</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        #myRadarChart {
+            width: 100px; /* Set your desired width */
+            height: 100px; /* Set your desired height */
+        }
+    </style>
 </head>
-<body bgcolor="#E5E4E2">
-    <div class="page-wrapper">
-        <div class="side1">
-        <div class="wrapper1">
-        <img class="profile-pic" src="portfolioimg.jpg">
-        <h1 class="name">Sanjana Mahesh</h1>
-            <a href ="https://www.linkedin.com/in/sanjana-mahesh-278100203/" class="linkedin">LinkedIn</a>
-            <a href ="https://github.com/SanjanaMahesh3" class="linkedin1">GitHub</a>
-            <a href ="mailto: sanjanamahesh2002@gmail.com" class="linkedin2">Email</a>
-        </div>
-        <div class="wrapper">
-            <h1>Experience</h1>
-            <p><li>Schneider Electric</li>
-            <li>Research Assistant</li>
-            </p>
-        </div>
-        <div class="wrapper">
-            <h1>Skills</h1>
-            <p><li>Tableau</li>
-            <li>SQL</li>
-            <li>Python</li>
-            </p>
-        </div>
+<body>
+    <header>
+        <h1>Sanjana Mahesh</h1>
+        <p>Software Engineer | Data Science Entusiast</p>
+    </header>
+    <div class="button-group">
+        <button onclick="window.location='https://github.com/SanjanaMahesh3'">Projects</button>
+        <button onclick="window.location='https://www.mdpi.com/2073-8994/15/9/1627'">Publications</button>
+        <button onclick="window.location='https://drive.google.com/file/d/1yw9VL-zY3gg_n9m7wGlvh_I-AhyF-zo4/view?usp=sharing'">Resume</button>
     </div>
-        <div class="side2">
-            <div class="wrapper">
-                <h1>About Me</h1>
-                <p>Hey! I’m Sanjana, a passionate data enthusiast currently working as a Data Analyst in the R&D department at Schneider Electric in Bangalore, India. I recently earned my Bachelor’s in Computer Science Engineering with a specialization in Machine Intelligence and Data Science (MIDS) from PES University, Bangalore.</p>
 
-                 <p>   I have a strong inclination towards research and have gained valuable experience in it. During one of my summer breaks, I worked as a research assistant at the IoT Center, contributing to a project titled “An Assistive Device for the Visually Impaired.” Earlier this year, I interned at Schneider Electric as a Data Analyst, further enhancing my skills.</p>
-                    
-                  <p>  With a GPA of 8.78 and a deep commitment to learning and excellence, I’m a detail-oriented professional with a versatile skill set in Data Analysis and Full Stack Development. My passion for data drives me to excel in fast-paced environments and deliver meaningful results. I’m excited to contribute to cutting-edge projects!</p>
-            </div>
-            <div class="wrapper">
-                <h1>Projects</h1>
-            </div>
-            <div class="wrapper">
-                <h1>Publications</h1>
-            </div>
+    <section id="about">
+        <div class="profile-photo">
+            <img src="portfolioimg.jpg" alt="Profile Photo">
+        </br>
+    </br>
+            <h2>Skills</h2>
+        </div>
+        <div class="bio">
+            <h2>About Me</h2>
+            <p>Hello! I am Sanjana, a data enthusiast. I am currently working as a Data Analyst in the R&D department at Schneider Electric, Bangalore, India. I recently graduated in bachelors in Computer Science engineering with a specialisation in MIDS(Machine Intelligence and Data Science) from PES University, Bangalore, India. </p>
+            <p>I am very research oriented with significant experience in it. In one of the summer breaks I was a research assistant in the centre of IoT working on the project, “An assistive device for the visually impaired”. This spring I interned with Schneider Electric as a data analyst.</p>
+            <p>With an 8.78 GPA and a strong dedication to continuous learning and excellence, I am a driven and detail-oriented professional. My diverse skills in Data Analysis and Full Stack Development enable me to excel in dynamic environments and deliver impactful results. Passionate about data and everything related to it, I am eager to contribute to innovative projects.</p>
+        </br>
+            <h2>Timeline</h2>
         </div>
         
-    </div>
+    </section>
+    <section class="skill">
+    <canvas id="myRadarChart" width="400"></canvas>
+    <script>
+        const ctx = document.getElementById('myRadarChart').getContext('2d');
+        const myRadarChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Python', 'SQL', 'Tableau', 'R', 'MERN Stack', 'Machine Learning', 'C'],
+                datasets: [{
+                    label: 'Proficiency',
+                    data: [9, 9, 10, 7, 8, 8, 8],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'black',
+                    borderWidth: 2,
+                    pointBackgroundColor: 'black'
+                }]
+            },
+            options: {
+                responsive: false,  // Disable responsive resizing
+                maintainAspectRatio: false, // Ensure the aspect ratio doesn't get locked
+                scale: {
+                    ticks: { beginAtZero: true, max: 10 },
+                    pointLabels: { fontSize: 14 }
+                }
+            }
+        });
+    </script>
+    </section>
+    <section>
+    <ul class="timeline">
+    	<li data-year="2022" data-month="June" data-text="Joined the Center of IOT as research intern"></li>
+    	<li data-year="2022" data-month="Sep" data-text="Mentored a hackathon"></li>
+    	<li data-year="2022" data-month="Oct" data-text="Won 3rd place in the Data analysis hackathon"></li>
+    	<li data-year="2023" data-month="Apr" data-text="Won 1st place in the Deep learning hackathon"></li>
+    	<li data-year="2023" data-month="Aug" data-text="Paper published in MDPI Symmetry"></li>
+        <li data-year="2024" data-month="Jan" data-text="Joined Schneider Electric as R&D intern"></li>
+    	<li data-year="2024" data-month="Mar" data-text="Presented capstone paper"></li>
+    	<li data-year="2024" data-month="Aug" data-text="Started working as a full time employee in the Secure Power department, Schneider Electric"></li>
+    </ul>
+</section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Project 1: An assistive model for the visually impaired integrating the domains of IoT, Blockchain and Deep learning</h3>
+            <p>Proposes a wearable IoT device that uses a wide-angle camera and deep learning to help visually impaired individuals detect and avoid obstacles through audio alerts. It integrates blockchain for security, offering a user-friendly alternative to traditional walking sticks.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 2: ReCap Pro - A Meta-Learning based caption corrector</h3>
+            <p>A framework that corrects auto-generated captions by dealing with the possible errors in nouns and verbs in the caption
+            </p>
+        </div>
+        <div class="project-card">
+            <h3>Project 3: Grab A Cab</h3>
+            <p>A cab management system implemented using Java, SQL and maven.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact Me</p>
+        <ul>
+            <li><a href="https://github.com/SanjanaMahesh3">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/sanjana-mahesh-278100203/">LinkedIn</a></li>
+            <li><a href="mailto:sanjanamahesh2002@gmail.com">Email</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
