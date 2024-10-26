@@ -1,0 +1,220 @@
+/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0 1.25rem;
+}
+*/
+header {
+    text-align: left;
+    margin-top: 3.125rem;
+    margin-left: 2.5rem;
+}
+.button-group button {
+    padding: 0.625rem 0.9375rem; /* Increased padding */
+    font-size: 1.125rem;    /* Increased font size */
+    cursor: pointer;
+    background-color: #36a2eb33;
+    color: black;
+    border: none;
+    border-radius:0.3125rem;
+}
+.button-group {
+    position: absolute;
+    top: 3.125rem;         /* Distance from the top */
+    right: 1.25rem;       /* Distance from the right */
+    display: flex;
+    flex-direction: row;
+    gap: 0.625rem;
+}
+header h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    margin-top: 3.125rem;
+}
+
+.profile-photo img {
+    border-radius: 50%;
+    height: 18.75rem;
+    width: 18.75rem;
+    height: 18.75rem;
+    object-fit: cover;
+}
+
+.bio {
+    margin-left: 1.875rem;
+}
+
+.bio h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.625rem;
+}
+
+.bio p {
+    font-size: 1.1em;
+}
+
+.bio h3 {
+    margin-top: 1.25rem;
+}
+
+.bio ul {
+    list-style: none;
+    margin-top: 0.625rem;
+}
+
+.bio ul li {
+    background-color: #e7f3ff;
+    padding: 0.5rem;
+    margin-bottom: 0.3125rem;
+    border-radius: 0.3125rem;
+}
+
+#projects {
+    margin-top: 16rem;
+}
+
+#projects h2 {
+    font-size: 1.8em;
+    margin-bottom: 1.25rem;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 1.25rem;
+    margin-bottom: 10.3125rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    font-size: 1.4em;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3.125rem;
+}
+
+footer p {
+    font-size: 1.2em;
+    margin-bottom: 0.625rem;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 0.625rem;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #0073e6;
+    font-size: 1.2em;
+}
+
+#chart{
+    display: flex;
+    align-items: center;
+    margin-top: 3.125rem;
+    height: 6.25rem;
+}
+.skill1{
+    padding-left: 11.25rem;
+    padding-top: 1.25rem;
+    display: flex;
+}
+
+
+.timeline {
+	width:91.875rem;
+	height: 1.25rem;
+	list-style: none;
+	text-align: justify;
+    margin: 0 auto;
+    width: 65%;
+    padding: 0;
+	margin-left: 41.25rem;
+    margin-top: -12.5rem;
+    margin-bottom: 10.625rem;
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(45%, rgba(255,255,255,0)), color-stop(51%, black), color-stop(57%, rgba(255,255,255,0)), color-stop(100%, rgba(255,255,255,0)));
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 45%, black 51%, rgba(255,255,255,0) 57%, rgba(255,255,255,0) 100%);
+}
+
+.timeline:after {display: inline-block; content: ""; width: 100%;}
+
+.timeline li {
+	display: inline-block;
+	width: 1.25rem;
+	height: 1.25rem;
+	background:#36a2eb33;
+	text-align: center;
+	line-height: 1.2;
+	position: relative;
+	border-radius: 50%;
+}
+
+.timeline li:before {
+	display: inline-block;
+	content: attr(data-month) "-" attr(data-year);
+	font-size: 1.625rem;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.timeline li:nth-child(odd):before {
+	top: -2.5rem;
+}
+.timeline li:nth-child(even):before {
+	bottom: -2.5rem;
+}
+
+.timeline li:after {
+	display: inline-block;
+	content: attr(data-text);
+	font-size: 1rem;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.timeline li:nth-child(odd):after {
+	bottom: 0;
+	margin-bottom: -0.625rem;
+	transform: translate(-50%, 100%);
+}
+.timeline li:nth-child(even):after {
+	top: 0;
+	margin-top: -0.625rem;
+	transform: translate(-50%, -100%);
+}
+
+
+#h21 {
+    font-size: 2em;
+    margin-bottom: 1.25rem; /* Space between title and timeline */
+    text-align: center;
+}
